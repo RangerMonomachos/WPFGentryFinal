@@ -1,0 +1,106 @@
+﻿<Window x:Class="WPFGentryFinal.HelloWorld"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFGentryFinal"
+        mc:Ignorable="d"
+        Title="HelloWorld" Height="450" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LeftHello">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="376"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LeftHello">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="TopWPF">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="172"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="TopWPF">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="11"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="RightWorld">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-476"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="RightWorld">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LatePunctuation">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="379"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="465"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="380"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="378"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LatePunctuation">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="165"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="GoForm1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="Window1"/>
+            </ObjectAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.IsCancel)" Storyboard.TargetName="GoForm1">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:4" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="button">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="Window2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="EndApp">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="End"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <TextBlock Name="LeftHello" HorizontalAlignment="Left" Margin="-104.516,110.628,0,0" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Name="TopWPF" HorizontalAlignment="Left" Margin="316.103,-70.299,0,0" TextWrapping="Wrap" Text="WPF" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Name="RightWorld" HorizontalAlignment="Left" Margin="854.247,110.628,-122.814,0" TextWrapping="Wrap" Text="World" VerticalAlignment="Top" FontSize="20" Width="60.567" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Name="LatePunctuation" HorizontalAlignment="Left" Margin="59,-62,0,0" TextWrapping="Wrap" Text="!" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button Name="GoForm1" Content="Button" HorizontalAlignment="Left" Margin="694,19,0,0" VerticalAlignment="Top" Width="75" Click="GoForm1_Click"/>
+        <Button Name="button" Content="Button" HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Name="EndApp" Content="Button" HorizontalAlignment="Left" Margin="360,10,0,0" VerticalAlignment="Top" Width="75" Click="EndApp_Click"/>
+
+    </Grid>
+</Window>
